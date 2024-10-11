@@ -35,7 +35,8 @@
     "build:cjs": "esbuild --bundle --sourcemap --platform=node --target=node14 src/index.ts --minify --external:chalk --external:antlr4ts --outfile=lib/index.cjs",
     "build": "tsc && npm run build:cjs && cp lib/index.d.ts lib/index.d.cts",
     "check": "tsc --noEmit",
-    "watch": "tsc --watch --preserveWatchOutput"
+    "watch": "tsc --watch --preserveWatchOutput",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@pgtyped/parser": "^2.3.0",
